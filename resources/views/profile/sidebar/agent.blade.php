@@ -1,0 +1,2 @@
+<li @if(Request::segment(4) == "myproperties") class="active" @endif><a href="{{SITE_LANG}}/account/agent/myproperties"><i class="glyph-icon flaticon-buildings-1"></i><span>{{ trans('common.MyProperties') }}</span></a></li>
+<li @if(Request::segment(4) == "mymessages") class="active" @endif><a href="{{SITE_LANG}}/account/agent/mymessages"><i class="fa fa-commenting-o"></i><span>{{ trans('common.MyMessages') }}@if(Auth::user()->getUnreadMessages()->count())<sup class="msg-notification"><b>{{ Auth::user()->getUnreadMessages()->count() }}</b></sup>@endif</span></a></li>
